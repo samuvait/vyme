@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Rating = ({ name }) => {
+const Rating = ({ name, average}) => {
   return (
-    <p>{name} 7/10</p>
+    <p>{`${name} ${average}/10`}</p>
   )
 }
 

@@ -1,7 +1,7 @@
-.singlemovieview {
+/*.singlemovieview {
   margin: 0;
-  padding: 5px;
-  height: 280px;
+  padding: 0px;
+  height: 300px;
   width: auto;
   max-width: 400px;
   min-width: 280px;
@@ -20,5 +20,12 @@
 
 .moviename {
   margin: 0;
+  padding: 0px;
   color: red;
 }
+
+.posterimg {
+  margin: 0;
+  padding: 0px;
+  float: left;
+}*/

@@ -2,19 +2,22 @@ import React from 'react'
 import Rating from './Rating'
 import './movie.css'
 
-const Movie = () => {
-  const movieName = "name of the movie"
+const posterUrl = 'https://image.tmdb.org/t/p/w185'
+const shortDescLength = 30
 
+const Movie = ({ movie }) => {
+  const movieName = movie.title
+  const description = `${movie.overview.substring(0, shortDescLength)}...`
+  const posterPath = `${posterUrl}${movie.poster_path}`
+  const avrg = movie.vote_average
 
   return (
-    <td className='singlemovieview'>
+    <td className='singlemovieview' >
       <figure className='poster'>
-        <img src='logo192.png' alt='logo' width='192' height='192' />
-        <figcaption className='moviename'><h3>{movieName}</h3><p>Description.</p></figcaption>
+        <img src={posterPath} alt='poster' width='185' height='278' className='posterimg'/>
+        <figcaption className='moviename'><p>{description}</p></figcaption>
       </figure>
-      <Rating name='imdb'/>
-      <Rating name='RT'/>
-      <Rating name='MC'/>
+      <Rating name='TMDb' average={avrg}/>
     </td>
   )
 }
