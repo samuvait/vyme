@@ -1,7 +1,7 @@
 import React from 'react'
 import Movie from './Movie'
 
-const MovieTable = () => {
+const MovieTable = ({ windowSize }) => {
 
   const TableCell = () => {
     return <Movie />
@@ -48,11 +48,13 @@ const MovieTable = () => {
     )
   }
 
+  //console.log('floored', Math.floor(windowSize.width/280))
+
   return (
     <div>
       <table>
         <tbody>
-          {createTable(2, 4)}
+          {createTable(Math.floor(windowSize.height/280), Math.floor(windowSize.width/280))}
         </tbody>
       </table>
     </div>
