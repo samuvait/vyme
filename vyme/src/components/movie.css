@@ -1,0 +1,24 @@
+.singlemovieview {
+  margin: 0;
+  padding: 5px;
+  height: 330px;
+  width: auto;
+  max-width: 400px;
+  min-width: 280px;
+  text-align: left;
+  background-color: slategray;
+  border: solid black;
+}
+
+.poster {
+  margin: 0;
+  padding: 0px;
+  text-align: center;
+  border: solid blue;
+  float: left;
+}
+
+.moviename {
+  margin: 0;
+  color: red;
+}
