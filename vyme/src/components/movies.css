@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.side {
+  flex: 1 2 auto;
+  width: 5%;
+}
+
+.main {
+  flex: 10 1 auto;
+  width: 90%;
+}

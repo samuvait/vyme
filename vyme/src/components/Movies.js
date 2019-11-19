@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import MovieTable from './MovieTable'
 import movieService from '../services/movies'
 import GridGallery from './GridGallery'
+import './movies.css'
 
 const Movies = ({ movies, setMovies }) => {
 
@@ -28,15 +28,21 @@ const Movies = ({ movies, setMovies }) => {
 
   useEffect(() => {
     movieService
-    .getTrending()
-    .then(movieList => {
-      console.log('Movies set to', movieList)
-      setMovies(movieList)
-    })
+      .getTrending()
+      .then(movieList => {
+        console.log('Movies set to', movieList)
+        setMovies(movieList)
+      })
   }, [])
 
   return (
-    <GridGallery movies={movies} windowSize={windowSize}/>
+    <div className='container'>
+      <div className='side' />
+      <div className='main'>
+        <GridGallery movies={movies} windowSize={windowSize} />
+      </div>
+      <div className='side' />
+    </div>
   )
 }
 
